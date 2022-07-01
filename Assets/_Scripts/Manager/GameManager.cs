@@ -13,11 +13,17 @@ public enum AllGameStates
 }
 public class GameManager : MonoBehaviour
 {
+    [Header("Game States")]
     [SerializeField] UnityEvent OnPossingState;
     [SerializeField] UnityEvent OnRunningState;
     [SerializeField] UnityEvent OnUIState;
     [SerializeField] UnityEvent OnHitState;
     [SerializeField] UnityEvent OnCompleteState;
+    
+    [Space(20)]
+    [Header("Pause Game")]
+    [SerializeField] UnityEvent OnGamePaused;
+    [SerializeField] UnityEvent OnGameResumed;
     public static GameManager instance { get; private set; }
     
     References _references;
@@ -93,12 +99,14 @@ public class GameManager : MonoBehaviour
             Debug.Log("_____________ Game Paused _______________");
             IsGamePaused = true;
             Time.timeScale = 0;
+            OnGamePaused.Invoke();
         }
         else 
         {
             Debug.Log("_____________ Game Resumed ________________");
             IsGamePaused = false;
             Time.timeScale = 1;
+            OnGameResumed.Invoke();
         }
     }
 }

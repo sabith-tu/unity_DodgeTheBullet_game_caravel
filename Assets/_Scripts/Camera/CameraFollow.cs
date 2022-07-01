@@ -32,7 +32,7 @@ public class CameraFollow : MonoBehaviour
     public void SetCameraStateToPunchPositionAndFollowEnemyWithDelay()
     {
         SetCameraStateToLookAtPunch();
-        Invoke(nameof(SetCameraStateToFollowEnemy),delayBwtLookAtPunchAndNormalAngle + 0.01f);
+        Invoke(nameof(SetCameraStateToFollowEnemy),delayBwtLookAtPunchAndNormalAngle - 0.0f);
     }
 
 
@@ -47,12 +47,12 @@ public class CameraFollow : MonoBehaviour
                 break;
             case AllCameraStates.LookAtPunchState:
                 
-                transform.DOMove(transform.position + lookAtPunchPossitionOffset , 0.4f);
+                transform.DOMove(transform.position + lookAtPunchPossitionOffset , 0.3f);
                 transform.DORotate(transform.eulerAngles + lookAtPunchRotationOffset, 0.4f);
 
                 cameraStartingPossition.z = transform.position.z;
-                transform.DOMove(cameraStartingPossition , 0.1f).SetDelay(delayBwtLookAtPunchAndNormalAngle);
-                transform.DORotate(cameraStartingRotation, 0.1f).SetDelay(delayBwtLookAtPunchAndNormalAngle);
+                //transform.DOMove(cameraStartingPossition , 0.1f).SetDelay(delayBwtLookAtPunchAndNormalAngle);
+                transform.DORotate(cameraStartingRotation, 0.5f).SetDelay(delayBwtLookAtPunchAndNormalAngle);
                 
                 break;
             case AllCameraStates.FollowEnemyState:

@@ -78,6 +78,7 @@
      <Compile Include="Assets\_Scripts\Extension\Helper.cs" />
      <Compile Include="Assets\JMO Assets\Toony Colors\Demo 2.0\TCF_Demo.cs" />
      <Compile Include="Assets\_Scripts\Bullet and spawner\BulletSpawner.cs" />
+     <Compile Include="Assets\SimpleAudioManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Art\Recived\10-06-22\Running Track and City\Toony Colors Pro\Shader Templates 2\SG2_Template_URP.txt" />
      <None Include="Assets\Art\Recived\10-06-22\Running Track and City\Toony Colors Pro\Shader Templates 2\Modules\Module_Triplanar Sampling.txt" />

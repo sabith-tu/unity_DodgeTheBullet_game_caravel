@@ -11,6 +11,7 @@ public enum AllBulletIsCloseToPlayerState
     NoBulletCloseToPlayer
 }
 
+
 public class WhenBulletCloseToPlayer : MonoBehaviour
 {
     [SerializeField] private UnityEvent OnBulletIsCloseToPlayer;
@@ -28,6 +29,8 @@ public class WhenBulletCloseToPlayer : MonoBehaviour
 
     private AllBulletIsCloseToPlayerState _curentBulletCloseToPlayerState =
         AllBulletIsCloseToPlayerState.NoBulletCloseToPlayer;
+    
+   
 
     RaycastHit hit;
 
@@ -101,6 +104,7 @@ public class WhenBulletCloseToPlayer : MonoBehaviour
         else
         {
             ifNoBulletsCouldHitPlayer.Invoke();
+            //Debug.Log("NoBulletsClose");
         }
     }
 
@@ -112,6 +116,7 @@ public class WhenBulletCloseToPlayer : MonoBehaviour
             {
                 _curentBulletCloseToPlayerState = AllBulletIsCloseToPlayerState.BulletsCloseToPlayer;
                 OnBulletIsCloseToPlayer.Invoke();
+                Debug.Log("BulletIsClose");
             }
         }
         else
@@ -120,6 +125,7 @@ public class WhenBulletCloseToPlayer : MonoBehaviour
             {
                 _curentBulletCloseToPlayerState = AllBulletIsCloseToPlayerState.NoBulletCloseToPlayer;
                 OnNoBulletIsCloseToPlayer.Invoke();
+                Debug.Log("NoBulletIsClose");
             }
         }
     }
