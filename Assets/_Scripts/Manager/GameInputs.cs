@@ -10,7 +10,7 @@ public class GameInputs : MonoBehaviour
     private float _fingerMovementUp;
     private float _fingerMovementRight;
     [SerializeField] private Slider _slider;
-    
+
     private void Update()
     {
         if (GameManager.instance.GetCurentGameState() != AllGameStates.Possing)
@@ -19,15 +19,16 @@ public class GameInputs : MonoBehaviour
             _fingerMovementRight = 0;
             return;
         }
+
         if (Input.touchCount <= 0)
         {
             //_fingerMovementUp = 0.05f; 
-            _fingerMovementUp = Time.timeScale; 
+            _fingerMovementUp = Time.timeScale;
             _fingerMovementRight = 0;
             return;
         }
-        
-        
+
+
         _fingerMovementUp = Input.GetTouch(0).deltaPosition.y;
         _fingerMovementRight = Input.GetTouch(0).deltaPosition.x;
     }
@@ -36,6 +37,7 @@ public class GameInputs : MonoBehaviour
     {
         return _fingerMovementUp;
     }
+
     public float DOGetGestureValueRight()
     {
         return _fingerMovementRight;

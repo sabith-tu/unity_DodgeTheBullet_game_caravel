@@ -14,6 +14,7 @@
 -a="I:\Dodge the bullets\Library\PlayerScriptAssemblies\Unity.VisualScripting.Core.dll"
 -a="I:\Dodge the bullets\Library\PlayerScriptAssemblies\Unity.Services.Core.Analytics.dll"
 -a="I:\Dodge the bullets\Library\PlayerScriptAssemblies\Unity.Services.Core.Registration.dll"
+-a="I:\Dodge the bullets\Library\PlayerScriptAssemblies\Unity.Postprocessing.Runtime.dll"
 -a="I:\Dodge the bullets\Library\PlayerScriptAssemblies\ToonyColorsPro.Runtime.dll"
 -a="I:\Dodge the bullets\Library\PlayerScriptAssemblies\Unity.Services.Core.Environments.dll"
 -a="I:\Dodge the bullets\Library\PlayerScriptAssemblies\Unity.Services.Core.Scheduler.dll"

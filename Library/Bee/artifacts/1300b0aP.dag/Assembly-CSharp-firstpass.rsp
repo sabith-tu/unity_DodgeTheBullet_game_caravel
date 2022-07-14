@@ -107,6 +107,7 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_LEGACY_INPUT_MANAGER
+-define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"Assets/Plugins/Demigiant/DOTween/DOTween.dll"
@@ -301,6 +302,7 @@
 -r:"Library/Bee/artifacts/1300b0aP.dag/OEBIF.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/ToonyColorsPro.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/ToonyColorsPro2.Demo.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aP.dag/Unity.Postprocessing.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.Services.Core.Analytics.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.Services.Core.Environments.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.Services.Core.ref.dll"
